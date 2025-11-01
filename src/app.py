@@ -10,7 +10,7 @@ def details():
     return jsonify({
         'time': datetime.datetime.now().strftime("%I:%M:%S %p on %B %d, %Y"),
         #'hostname': os.uname().nodename
-        'hostname': socket.gethostname()
+        'hostname': socket.gethostname(),
         'ip_address': socket.gethostbyname(socket.gethostname())
         })
 
