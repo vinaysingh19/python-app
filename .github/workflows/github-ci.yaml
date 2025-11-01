@@ -22,4 +22,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: usevinay199/python-app:${{ GITHUB_SHA::6 }}
+          tags: vinay199/python-app:${{ GITHUB_SHA::6 }}
