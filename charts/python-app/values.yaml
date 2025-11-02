@@ -4,7 +4,7 @@ replicaCount: 1
 image:
   repository: vinay199/python-app
   pullPolicy: IfNotPresent
-  tag: fa0b81
+  tag: df3130
 
 imagePullSecrets: []
 # This is to override the chart name.
