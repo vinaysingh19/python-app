@@ -40,7 +40,7 @@ jobs:
       - name: modify helm values.yaml with new image tag
         shell: bash
         run: |
-          sed -i 's|^  tag: .*|  tag: '${{ needs.ci.outputs.COMMIT_ID }}'|' python-app/charts/python-app/values.yaml
+          sed -i 's|^  tag: .*|  tag: '${{ needs.ci.outputs.COMMIT_ID }}'|' charts/python-app/values.yaml
 
       # - name: modify helm values.yaml with new image tag
       #   shell: bash
