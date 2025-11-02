@@ -36,17 +36,18 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
-      # - name: modify helm values.yaml with new image tag
-      #   shell: bash
-      #   run: |
-      #     sed -i 's|^  tag: .*|  tag: '${{ needs.ci.outputs.COMMIT_ID }}'|' python-app/charts/python-app/values.yaml
-
+ 
       - name: modify helm values.yaml with new image tag
         shell: bash
         run: |
-          echo ${{ needs.ci.outputs.COMMIT_ID }}
-          pip install yq
-          yq -Yi '.image.tag = "${{ needs.ci.outputs.COMMIT_ID }}"' charts/python-app/values.yaml
+          sed -i 's|^  tag: .*|  tag: '${{ needs.ci.outputs.COMMIT_ID }}'|' python-app/charts/python-app/values.yaml
+
+      # - name: modify helm values.yaml with new image tag
+      #   shell: bash
+      #   run: |
+      #     echo ${{ needs.ci.outputs.COMMIT_ID }}
+      #     pip install yq
+      #     yq -Yi '.image.tag = "${{ needs.ci.outputs.COMMIT_ID }}"' charts/python-app/values.yaml
 
       - name: commit changes
         uses: EndBug/add-and-commit@v9
