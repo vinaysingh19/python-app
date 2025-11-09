@@ -5,7 +5,7 @@ metadata:
   description: python app deployed on kubernetes cluster
   annotations:
     github.com/project-slug: vinaysingh19/python-app
-
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: development
