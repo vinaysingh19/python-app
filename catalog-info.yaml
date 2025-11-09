@@ -7,6 +7,6 @@ metadata:
     github.com/project-slug: vinaysingh19/python-app
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: service
+  type: documentation
   owner: development
   lifecycle: experimental
