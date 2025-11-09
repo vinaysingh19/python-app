@@ -10,4 +10,4 @@ plugins:
 # For sidebar navigation on https://backstage.io/, see `microsite/sidebars.js`
 nav:
   - Overview:
-      - What is python-app?: 'docs/index.md'
+      - What is python-app?: 'index.md'
